@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #111827
+        );
+
+    color: #e5e7eb;
+
+    min-height: 100vh;
+}
+
+
+header {
+    padding: 22px;
+
+    background: rgba(17, 24, 39, 0.95);
+
+    border-bottom:
+        1px solid #334155;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+
+header h1 {
+    margin: 0 0 8px;
+
+    font-size: 28px;
+}
+
+
+.status {
+    font-size: 14px;
+
+    color: #94a3b8;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+#statusDot {
+    width: 10px;
+
+    height: 10px;
+
+    border-radius: 50%;
+
+    background: #f59e0b;
+}
+
+
+main {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 25px;
+}
+
+
+.searchArea {
+    display: flex;
+
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+#searchInput {
+    flex: 1;
+
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border:
+        1px solid #334155;
+
+    background: #1e293b;
+
+    color: white;
+
+    font-size: 16px;
+
+    outline: none;
+}
+
+
+button,
+.downloadBtn {
+    padding: 12px 18px;
+
+    border: 0;
+
+    border-radius: 10px;
+
+    background: #2563eb;
+
+    color: white;
+
+    cursor: pointer;
+
+    text-decoration: none;
+
+    display: inline-block;
+}
+
+
+button:hover,
+.downloadBtn:hover {
+    opacity: 0.9;
+}
+
+
+.filesGrid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(230px, 1fr)
+        );
+
+    gap: 16px;
+}
+
+
+.fileCard {
+    background: #1e293b;
+
+    border:
+        1px solid #334155;
+
+    border-radius: 15px;
+
+    padding: 18px;
+
+    transition: 0.2s;
+}
+
+
+.fileCard:hover {
+    transform: translateY(-2px);
+}
+
+
+.fileIcon {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+
+.fileName {
+    font-size: 17px;
+
+    font-weight: bold;
+
+    word-break: break-word;
+
+    margin-bottom: 10px;
+}
+
+
+.fileInfo {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+
+#loading,
+#empty {
+    text-align: center;
+
+    padding: 50px;
+
+    color: #94a3b8;
+}
+
+
+#notice {
+    background: #1d4ed8;
+
+    padding: 13px;
+
+    border-radius: 10px;
+
+    margin-bottom: 20px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+
+footer {
+    text-align: center;
+
+    padding: 30px;
+
+    color: #64748b;
+}
+
+
+@media (max-width: 600px) {
+
+    main {
+        padding: 15px;
+    }
+
+    .searchArea {
+        flex-direction: column;
+    }
+
+    #refreshBtn {
+        width: 100%;
+    }
+
+}
